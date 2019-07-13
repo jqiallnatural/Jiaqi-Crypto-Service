@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="lit">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Tickery</title>
+</head>
+<body>
+ 
+<!--action = "/" targeting home route-->
+<form action="/" method="post">
+
+    <input type="number" name="amount" placeholder="Quantity" required>
+
+    <input id="times2" type="hidden" name="clickedDouble">
+
+    <select name="crypto">
+        <option value="BTC">Bitcoin</option>
+        <option value="ETH">Ethereum</option>
+        <option value="LTC">LitCoin</option>
+        <option value="XRP">Ripple</option>
+    </select>
+
+    <select name="fiat">
+        <option value="USD">US Dollars</option>
+        <option value="CAD">CAD Dollars</option>
+        <option value="EUR">EU Euros</option>
+         <!--<option value="RMB">Renminbi</option>-->
+    </select>
+
+    <button name="button">Check</button>
+
+    <button name="dTrouble" onclick="desNuts()">double amount</button>
+
+</form>
+<script>
+function desNuts(){
+    document.getElementById("times2").value = "clicked"
+}   
+</script>
+</body>
+
+
+</html>
